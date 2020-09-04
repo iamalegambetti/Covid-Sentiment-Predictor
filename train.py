@@ -75,17 +75,17 @@ class CNN_bi_uni_gram(nn.Module):
         emb = self.embedding(text).unsqueeze(1) # Add one extra dimension to fit the convolution
 
         # Convolve and Activate
-        #bigram = F.relu(self.conv_big(emb).squeeze(3))
+        bigram = F.relu(self.conv_big(emb).squeeze(3))
         unigram = F.relu(self.conv_uni(emb).squeeze(3))
 
         # Pool - Maxpool
-        #pooled_bi = F.max_pool1d(bigram, bigram.shape[2]).squeeze(2)
+        pooled_bi = F.max_pool1d(bigram, bigram.shape[2]).squeeze(2)
         pooled_uni = F.max_pool1d(unigram, unigram.shape[2]).squeeze(2)
 
         # Concat
-        #concat = self.droupout(torch.cat((pooled_uni), dim = 1))
+        concat = self.droupout(torch.cat((pooled_uni), dim = 1))
 
-        return self.fc(self.droupout(pooled_uni))
+        return concat
 
 
 
