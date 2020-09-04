@@ -14,8 +14,9 @@ PyTorch Implementaion of a Sentiment Analysis Classifier for Italian Tweets rela
   <li> The model achieves a ~77% test set accuracy on 3 target categories. </li>
   <li> Data has been collected from this <a href = "https://github.com/charlesmalafosse/open-dataset-for-sentiment-analysis"> GitHub Repo from Charles Malfosse </a>
     Sentiment is classified to either positive, negative, neutral, or mixed. For clarity reasons, mixed sentiment tweets, which were one of the least popular category, were discarded.
-  <li> Pretrained word2vec embedding were downloaded from <a href = "http://www.italianlp.it/resources/italian-word-embeddings/"> here </a>. 
+  <li> Pretrained word2vec embedding were downloaded from <a href = "http://www.italianlp.it/resources/italian-word-embeddings/"> here</a>.</li>
   <li> Model consists of two Convolutions on an unigram (a word) first and a bi-gram (a combination of two words) later and seeks to learn embedding representations for our training dataset. </li> 
+  <li> If you are really interested in the application of the model you can read the report <a href = "https://drive.google.com/file/d/1iEAgCbi5aXCOJaIm0WMTb10Qov8pgCE3/view?usp=sharing"> here</a>. </li>
 </ul>
 
 Data and embeddings are not shared for privacy reasons. For any enquiries please contact me at alessandro.gambetti4@gmail.com. Thanks!
