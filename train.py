@@ -83,7 +83,7 @@ class CNN_bi_uni_gram(nn.Module):
         pooled_uni = F.max_pool1d(unigram, unigram.shape[2]).squeeze(2)
 
         # Concat
-        concat = self.droupout(torch.cat((pooled_uni), dim = 1))
+        concat = self.droupout(torch.cat((pooled_uni, pooled_bi), dim = 1))
 
         return concat
 
