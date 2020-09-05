@@ -132,7 +132,7 @@ class SentimentPredictor():
 
 
 if __name__ == '__main__':
-    from model_code import CNN_uni_gram
+    from model_code import CNN_bi_uni_gram
     model = CNN_bi_uni_gram(30002, 128, 1, 3)
     #text_field = '/Volumes/Transcend/CADD/covid-sentiment/predictions/analyzer/TEXT.pickle'
     params = open('/Volumes/Transcend/CADD/covid-sentiment/sentiment-predictions/analyzer/cnn-uni-classifier.pt', 'rb')
